@@ -25,17 +25,17 @@ ENQUANTO FLAG FAÇA
    Escreva("Digite a opção:")
    Leia(opcao)
    Escolha opcao
-   Caso 1, 9
-      ESCREVAL("A opção 1")
-   Caso 2, 8
-      ESCREVAL("A opção 2")
-   Caso 3
-      ESCREVAL("A opção 3")
+   Caso 0, 1, 2, 3, 4
+      ESCREVAL("Mau")
+   Caso 5, 6, 7, 8, 9
+      ESCREVAL("Mediocre")
+   Caso 10, 11, 12, 13
+      ESCREVAL("Suficiente")
       
-   Caso 4 ATÉ 6
-      ESCREVAL("A opção 4")
-   Caso 7
-      ESCREVAL("A opção 5")
+   Caso 14 ATÉ 17
+      ESCREVAL("Bom")
+   Caso 18 ATÉ 20
+      ESCREVAL("Muito bom")
       FLAG := FALSO   // muda a variável do controle para encerrar o loop
    OUTROCASO      // caso a variável tenha algum valor acima de 5 ou abaixo de 1
       Escreval("Opção inválida")
