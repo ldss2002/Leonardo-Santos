@@ -3,18 +3,26 @@ Algoritmo "Descontos_Produtos"
 // Autor(a)    : Leonardo Santos
 // Data atual  : 12/10/2017
 Var
-quantidade,desconto:inteiro
+preco, precoatu, dct:real
+qtd:inteiro
+nome, algo:caracter
 Inicio
-Escreva("Qual a Quantidade?")
-Leia(quantidade)
-escolha quantidade
-caso 1,2,3,4
-Escreva("seu desconto é 0%")
-caso 5,6,7,8,9,10
-Escreva("seu desconto é 5%")
-caso 11.12.13,14,15,16,17,18,19,20
-Escreva("seu desconto é 15%")
-outrocaso
-Escreva("seu desconto é 30%")
+escreval("Qual o nome do produto?")
+leia (nome)
+escreval ("Qual a quantidade de produtos?")
+leia(qtd)
+escreval("Qual o preço do produto?")
+leia(preco)
+escolha qtd
+caso 1 ate 4
+precoatu <- preco*qtd
+caso 5 ate 10
+precoatu <- qtd*(preco-(preco*0.05))
+caso 11 ate 20
+precoatu <- qtd*(preco-(preco*0.15))
+caso 20 ate 10000000000
+precoatu <- qtd*(preco-(preco*0.3))
+algo <- "Inválido"
 fimescolha
+escreva("O produto(",nome,")vai passar a custar ",precoatu,"€")
 Fimalgoritmo
